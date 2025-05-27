@@ -1,0 +1,172 @@
+/* Navbar and page container */
+body {
+    font-family: Arial, sans-serif;
+	background-color: #2575fc; /* solid blue */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #6a11cb;
+    padding: 10px 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-logout form {
+    margin: 0;
+}
+
+.logout-button {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #2575fc;
+    border: 2px solid #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ffffff;
+    color: #1a56d6;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+    line-height: 40px;
+    font-size: 28px;
+}
+
+.page-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form controls */
+label {
+    margin-right: 10px;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+#submitBtn {
+    margin-top: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: #4b6cb7;
+    margin-bottom: 30px;
+}
+
+
+#submitBtn:hover {
+    background-color: #218838;
+}
+
+/* Button container and layout */
+.button-container {
+    margin-top: 150px;
+    text-align: center;
+}
+
+/* Logout button section */
+.home-section {
+    margin-top: 50px;
+}
+
+.big-button {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.big-button:hover {
+    background-color: #5011a1;
+}
+
+td > div.decision-option {
+    display: inline-block; /* or flex with row direction */
+    margin-bottom: 4px;
+}
+
+td > div.decision-option label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+td > div.decision-option input[type="radio"] {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
