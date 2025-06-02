@@ -19,7 +19,7 @@
 	    <label>Name: </label>
 	    <input type="text" name="name"/><br>
 	    <label>Email: </label>
-	    <input type="text" name="username"/><br>
+	    <input type="email" name="username"/><br>
 	    <label>Password: </label>
 	    <input type="password" name="password"/><br>
 	    <label>Department: </label>
@@ -33,18 +33,40 @@
 	
 	<script>
 	       $('#signupForm').on('submit', function(e) {
-	           // Step 1: grab form values
+	           
 	           const name = $('input[name="name"]').val();
 	           const email = $('input[name="username"]').val();
 	           const department = $('input[name="department"]').val();
+			   const password = $('input[name="password"]').val();
 	           const project = $('input[name="project"]').val();
 
-	           // Step 2: do the normal form submission (User creation)
-	           // We don't preventDefault so this proceeds normally
+			   function isValidEmail(email) {
+			     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			     return regex.test(email);
+			   }
 
-	           // Step 3: call Ticket Microservice via AJAX (Employee creation)
+			   if (name === '') {
+			     alert('Name is required');
+			     return;
+			   }
+			   if (!isValidEmail(email)) {
+			     alert('Please enter a valid email address');
+			     return;
+			   }
+			   if (password.length < 6) {
+			     alert('Password must be at least 6 characters');
+			     return;
+			   }
+			   if (department === '') {
+			     alert('Department is required');
+			     return;
+			   }
+			   if (project === '') {
+			     alert('Project is required');
+			     return;
+			   }
 	           $.ajax({
-	               url: 'http://localhost:8485/tickets/createEmployee', // <-- Adjust this to your ticket microservice endpoint
+	               url: 'http://localhost:8485/tickets/createEmployee', 
 	               method: 'POST',
 	               contentType: 'application/json',
 	               data: JSON.stringify({

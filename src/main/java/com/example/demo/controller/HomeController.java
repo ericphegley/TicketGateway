@@ -33,7 +33,6 @@ import com.common.ticket_common.StatusName;
 import com.common.ticket_common.TicketUpdateDTO;
 import com.example.demo.domain.RoleName;
 
-import com.example.demo.service.TicketService;
 import com.example.demo.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -50,8 +49,6 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private TicketService ticketService; // NEW
 
     HomeController(SecurityFilterChain apiFilterChain2) {
         this.apiFilterChain2 = apiFilterChain2;

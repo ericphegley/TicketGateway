@@ -92,7 +92,7 @@
 				    $('#ticketsBody').append(row);
 				});
 
-	            // re-bind your cancel button event handler for new buttons
+
 	            $('.cancel-btn').on('click', function () {
 	                $(this).parent().find('label input').prop('checked', false);
 	                const anySelected = $('input[type="radio"]:checked').length > 0;
@@ -106,12 +106,12 @@
 					        url: 'http://localhost:8485/tickets/downloadFiles?filePath=' + encodeURIComponent(filePath),
 					        method: 'GET',
 					        xhrFields: {
-					            responseType: 'blob'  // important for binary download
+					            responseType: 'blob'  
 					        },
 					        success: function(blob) {
 					            const link = document.createElement('a');
 					            link.href = window.URL.createObjectURL(blob);
-					            link.download = "ticket_" + ticketId + ".zip"; // filename from path
+					            link.download = "ticket_" + ticketId + ".zip"; 
 					            link.click();
 								link.remove();
 					        },
@@ -133,7 +133,7 @@
 	    });
 		
 		$('#decisionform').on('submit', function(e) {
-			e.preventDefault(); // prevent default form submission
+			e.preventDefault(); 
 
 			let decisions = [];
 

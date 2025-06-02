@@ -151,7 +151,7 @@
 		});
 		
 		$('#decisionform').on('submit', function(e) {
-			e.preventDefault(); // prevent default form submission
+			e.preventDefault(); 
 
 			let decisions = [];
 

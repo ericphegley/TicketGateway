@@ -91,7 +91,6 @@
 				    $('#ticketsBody').append(row);
 				});
 
-	            // re-bind your cancel button event handler for new buttons
 	            $('.cancel-btn').on('click', function () {
 	                $(this).parent().find('label input').prop('checked', false);
 	                const anySelected = $('input[type="radio"]:checked').length > 0;
@@ -103,14 +102,14 @@
 	        }
 	    });
 
-	    // Radio button change event for dynamically added inputs
+
 	    $(document).on('change', 'input[type="radio"]', function () {
 	        const anySelected = $('input[type="radio"]:checked').length > 0;
 	        $('#submitBtn').toggle(anySelected);
 	    });
 		
 		$('#decisionform').on('submit', function(e) {
-			e.preventDefault(); // prevent default form submission
+			e.preventDefault(); 
 
 			let decisions = [];
 
